@@ -59,13 +59,13 @@ The backpropagation algorithm pseudocode is as follows:
 
 ```
 DZL =   P−Y
-∂L∂WL =1m DWL =  1mDZL.(HL−1)T
-∂L∂bL = 1mDbL  = 1mDZL
+∂L/∂WL =(1/m)*DWL =  (1/m)*DZL.(HL−1)T
+∂L/∂bL = (1/m)*DbL  = (1/m)*DZL
  dHL−1 = (WL)T.DZL
 for l in [L−1,........1]:
      DZl = dHl⊗σ′(Zl)
-     ∂L∂Wl = 1mDWl = 1mDZl.(Hl−1)T
-     ∂L∂bl = 1mDbl  = 1mDZl
+     ∂L/∂Wl = (1/m)*DWl = (1/m)*DZl.(Hl−1)T
+     ∂L/∂bl = (1/m)*Dbl  = (1/m)*DZl
     dHl−1 = (Wl)T.DZl
 ```
 
